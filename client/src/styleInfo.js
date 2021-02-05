@@ -8,6 +8,9 @@ import monet_example from "./page/img/Monet_example.png";
 import pelissero_example from "./page/img/Pelissero_example.jpg";
 import vangogh_example from "./page/img/Vangogh_example.jpg";
 import ukiyoe_example from "./page/img/Ukiyoe_example.png";
+import mulan_example from "./page/img/Mulan_example.jpeg";
+import conan_example from "./page/img/Conan_example.jpg";
+import generalddol_example from "./page/img/Generalddol_example.PNG";
 
 export default [
   {
@@ -71,19 +74,19 @@ export default [
   {
     "style": "Mulan",
     "explain": "style by cartoongan2_mulan",
-    "imageSrc": empty,
+    "imageSrc": mulan_example,
     "value": "cartoongan2_mulan"
   },
   {
     "style": "Conan",
-    "explain": "style by Detective Concn",
-    "imageSrc": empty,
+    "explain": "style by Detective Conan",
+    "imageSrc": conan_example,
     "value": "cartoongan2_conan"
   },
   {
     "style": "똘이장군",
     "explain": "style by 똘이장군 the old anti-communist cartoon",
-    "imageSrc": empty,
+    "imageSrc": generalddol_example,
     "value": "cartoongan2_generalddol"
   },
 

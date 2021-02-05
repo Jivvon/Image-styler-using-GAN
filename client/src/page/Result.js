@@ -37,6 +37,7 @@ const Result = () => {
 
   const retryClickHandler = () => {
     history.goBack();
+    window.scrollTo(0, 0);
   }
 
   useEffect(() => {

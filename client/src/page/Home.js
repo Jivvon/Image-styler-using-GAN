@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom"
 import imageCompression from "browser-image-compression";
 import StyleCard from "./components/StyleCard";
 import styleInfo from "../styleInfo";
-import { Box, Container, Typography, Grid, Button, RadioGroup} from "@material-ui/core"
+import { Box, Container, Typography, Grid, Button, RadioGroup } from "@material-ui/core"
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heroButtons: {
     marginTop: theme.spacing(4),
-    },
+  },
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
@@ -75,10 +75,10 @@ const Home = () => {
         </Typography>
         <div className={classes.heroButtons}>
           <Grid container spacing={1} justify="center">
-              <Grid item xs={12}>
-                {inputImagePreviewUrl && <img src={inputImagePreviewUrl} />}
-              </Grid>
-              <Grid item>
+            <Grid item xs={12}>
+              {inputImagePreviewUrl && <img src={inputImagePreviewUrl} />}
+            </Grid>
+            <Grid item>
               <Button variant="contained" size="large" component="label" color="primary">
                 Upload
                 <input
@@ -95,25 +95,25 @@ const Home = () => {
 
       <Box m="2rem">
         <Typography variant="h5" align="center" color="textSecondary">
-          2. Take your pick! Choose whatever art style you want
+          2. Take your pick! Choose your artstyle
         </Typography>
 
         <Container className={classes.cardGrid}>
-            <RadioGroup aria-label="author" name="author" onChange={onStyleChange}>
-              <Grid container spacing={4}>
-                  {styleInfo.map((data, index) => {
-                    return (
-                      <StyleCard
-                        key={index}
-                        imageSrc={data.imageSrc}
-                        style={data.style}
-                        explain={data.explain}
-                        value={data.value}
-                      ></StyleCard>
-                    );
-                  })}
-                </Grid>
-              </RadioGroup>
+          <RadioGroup aria-label="author" name="author" onChange={onStyleChange}>
+            <Grid container spacing={4}>
+              {styleInfo.map((data, index) => {
+                return (
+                  <StyleCard
+                    key={index}
+                    imageSrc={data.imageSrc}
+                    style={data.style}
+                    explain={data.explain}
+                    value={data.value}
+                  ></StyleCard>
+                );
+              })}
+            </Grid>
+          </RadioGroup>
         </Container>
         <Grid container justify="center">
           <Button variant="contained" size="large" component="label" color="primary" onClick={resultPageClickHandler}>
